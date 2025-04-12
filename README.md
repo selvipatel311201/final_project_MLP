@@ -24,10 +24,12 @@ The goal is to investigate how well pretrained features generalize and how much 
 
 # Addressing the Project Requirements:
 
-# How We Covered Point 1:
+# How We Covered Point 1 which is( You will need to test the methodology of the selected research paper on new datasets to evaluate its effectiveness in different contexts)
+
 We used CIFAR-10 — a low-resolution dataset that differs from ImageNet — to evaluate how well EfficientNet generalizes to unseen data.
 
-# How We Covered Point 2:
+# How We Covered Point 2 which is (You should experiment with changing some of the model parameters to create an upgraded version of the existingmethodology. This will allow you to explore the impact of different parameter values on the model’s performance)
+
 We explored two options:
 1. Freezing pretrained layers and training only the classifier  
 2.  Fine-tuning the entire model (our selected approach)
