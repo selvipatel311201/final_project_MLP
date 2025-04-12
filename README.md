@@ -3,7 +3,6 @@
 This repository contains our final project submission. The project focuses on applying *transfer learning by fine-tuning the EfficientNet-B0 model on the CIFAR-10 dataset using PyTorch.
 
 #  Introduction
-
 Transfer learning has become a widely adopted technique in deep learning, especially for image classification tasks.  
 This project applies transfer learning using the EfficientNet-B0 architecture — a model originally trained on the large-scale ImageNet dataset — and adapts it to the smaller, low-resolution CIFAR-10 dataset.
 
@@ -24,23 +23,48 @@ The goal is to investigate how well pretrained features generalize and how much 
 
 # Addressing the Project Requirements:
 
-# How We Covered Point 1 which is( You will need to test the methodology of the selected research paper on new datasets to evaluate its effectiveness in different contexts)
+# How We Covered Point 1:
 
-We used CIFAR-10 — a low-resolution dataset that differs from ImageNet — to evaluate how well EfficientNet generalizes to unseen data.
+> *"You will need to test the methodology of the selected research paper on new datasets to evaluate its effectiveness in different contexts."*
 
-# How We Covered Point 2 which is (You should experiment with changing some of the model parameters to create an upgraded version of the existingmethodology. This will allow you to explore the impact of different parameter values on the model’s performance)
+To fulfill this requirement, we selected CIFAR-10 — a completely different dataset from the original ImageNet used in the EfficientNet paper.  
+CIFAR-10 consists of low-resolution (32×32) images across 10 classes, whereas ImageNet contains high-resolution (224×224+) images across 1,000 classes.
 
-We explored two options:
-1. Freezing pretrained layers and training only the classifier  
-2.  Fine-tuning the entire model (our selected approach)
+By training and evaluating the EfficientNet-B0 model on CIFAR-10, we were able to test how well the methodology generalizes to new data distributions and resource-constrained scenarios.
 
-Full fine-tuning enabled the model to adapt to new patterns specific to CIFAR-10.
+This allowed us to validate the model’s transferability and real-world adaptability to smaller, domain-specific datasets.
+
+
+#  How We Covered Point 2:
+
+> *"You should experiment with changing some of the model parameters to create an upgraded version of the existing methodology. This will allow you to explore the impact of different parameter values on the model’s performance."*
+
+To address this point, we experimented with the model’s trainable components and training strategy.
+
+We explored two different approaches:
+
+1. Freezing the pretrained feature extractor layers and training only the new classifier head.
+2. Fine-tuning the entire model — allowing all layers to update based on CIFAR-10 data.
+
+We selected the full fine-tuning approach, which enabled the model to adjust both the learned features and the final classification layer. This change allowed EfficientNet-B0 to learn CIFAR-10-specific patterns, improving adaptability and performance.
+
+By modifying which layers are trainable and observing the impact on performance, we effectively explored the effect of hanging model parameters as required in Point 2.
 
 # Project Goals:
 
 - Reproduce the original EfficientNet-B0 model's baseline performance on a new dataset (CIFAR-10) to establish a benchmark.
 - Improve the model by applying full fine-tuning and monitoring performance through training metrics.
 - Differentiate between implementation (paper reproduction) and contribution (our enhancements) to showcase clear understanding and original work.
+
+# What We Are Doing
+
+- We started by loading EfficientNet-B0 (and plan to explore EfficientNet-B1) pretrained on ImageNet.
+- The initial performance of the model on CIFAR-10 was below 10% accuracy, due to the domain gap between datasets.
+- We replaced the final classification layer to predict 10 classes instead of 1,000 (ImageNet).
+- We fine-tuned the entire model (not just the classifier) using CIFAR-10 for 25 epochs.
+- We tracked training loss and test accuracy after each epoch to monitor learning progress.
+- After fine-tuning, the model achieved a test accuracy of ~86.52% — a significant performance jump.
+- We plan to apply the same strategy to EfficientNet-B1 for further evaluation.
 
 # Implementation vs Contribution
 
