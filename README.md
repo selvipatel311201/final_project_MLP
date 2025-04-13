@@ -159,20 +159,18 @@ By modifying which layers are trainable and observing the impact on performance,
 ```bash
 pip install -r requirements.txt
 
-#  **Conclusion**:
 
-This project successfully demonstrated the power of transfer learning by applying EfficientNet-B0 — originally trained on ImageNet — to a completely different dataset (CIFAR-10). 
+# Conclusion:
+
+This project successfully demonstrated the power of transfer learning by applying EfficientNet-B0 — originally trained on ImageNet — to a completely different dataset (CIFAR-10).
 
 We first established a baseline by evaluating the pretrained model without any training, which resulted in low accuracy (~9.89%) due to domain differences.  
 By fine-tuning the entire model on CIFAR-10 for 25 epochs, we significantly improved performance, achieving an accuracy of ~86.52%.
 
 Our approach highlights the value of:
 - Reusing pretrained models for new tasks
-- Adjusting model architecture for dataset compatibility
+- Adapting model architecture for dataset compatibility
 - Fine-tuning strategies in low-resolution, small-dataset scenarios
 
 The success of this transfer learning process reinforces the adaptability of EfficientNet and opens the door for future experimentation on deeper variants like EfficientNet-B1, other image classification datasets, and deployment in real-world applications.
-
->  The methodology followed here not only meets the academic project objectives but also provides a practical foundation for real-world deep learning solutions.
-
- 
+> The methodology followed here not only meets the academic project objectives but also provides a practical foundation for real-world deep learning solutions.
