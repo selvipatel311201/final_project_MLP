@@ -172,5 +172,3 @@ Our approach highlights the value of:
 
 The success of this transfer learning process reinforces the adaptability of EfficientNet and opens the door for future experimentation on deeper variants like EfficientNet-B1, other image classification datasets, and deployment in real-world applications.
 
->  **The methodology followed here not only meets the academic project objectives but also provides a practical foundation for real-world deep learning solutions.**
-
