@@ -154,12 +154,15 @@ By modifying which layers are trainable and observing the impact on performance,
   - Combines both implementation and contribution, with detailed explanations and results
     
 
-# 3️.`requirements.txt`  
+### 3. requirements.txt
+
 - Contains all necessary Python packages  
 - Install using:
+
 ```bash
 pip install -r requirements.txt
 
+----
 #  **Conclusion**
 
 This project successfully demonstrated the power of transfer learning by applying EfficientNet-B0 — originally trained on ImageNet — to a completely different dataset (CIFAR-10).
