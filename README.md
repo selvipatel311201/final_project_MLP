@@ -150,8 +150,9 @@ By modifying which layers are trainable and observing the impact on performance,
   - Plots training curves  
   - Evaluates post-training performance (~86.52%)
 
-- `AIDI_1002_final_project.ipynb`  
+- `AIDI_1002_final_project.ipynb` & 'AIDI_1002_final_project.pdf'
   - Combines both implementation and contribution, with detailed explanations and results
+    
 
 # 3️.`requirements.txt`  
 - Contains all necessary Python packages  
